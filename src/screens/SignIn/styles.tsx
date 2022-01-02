@@ -1,15 +1,14 @@
 import { StyleSheet } from 'react-native';
-import { themes } from '../../global/styles/theme';
+import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: themes.colors.background
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
-    width: '100%',
+    width: "100%",
     height: 360,
   },
   content: {
@@ -17,16 +16,20 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 50,
   },
   title: {
-    color: themes.colors.heading,
-    textAlign: 'center',
+    color: theme.colors.heading,
+    textAlign: "center",
     fontSize: 40,
     marginBottom: 16,
+    fontFamily: theme.fonts.title700,
+    lineHeight: 40,
   },
   subtitle: {
-    color: themes.colors.heading,
+    color: theme.colors.heading,
     fontSize: 15,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 64,
+    fontFamily: theme.fonts.title500,
+    lineHeight: 25,
   }
 
 })

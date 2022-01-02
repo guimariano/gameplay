@@ -5,15 +5,8 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './styles'
 
 export function SignIn() {
-  const [digitacao, setText] = useState('')
-
   return (
     <View style={styles.container}>
-      <StatusBar
-        backgroundColor='transparent'
-        barStyle='light-content'
-        translucent
-      />
       <Image
         source={illustrationImg}
         style={styles.image}
@@ -21,12 +14,12 @@ export function SignIn() {
       />
       <View style={styles.content}>
         <Text style={styles.title}>
-          Organize {`\n`}
-          suas Jogatinas{`\n`}
-          facilmente {`\n`}
+          Conecte-se {'\n'}
+          e organize suas {'\n'}
+          jogatinas {'\n'}
         </Text>
         <Text style={styles.subtitle}>
-          Crie grupos para jogar seus games {`\n`}
+          Crie grupos para jogar seus games {'\n'}
           favoritos com seus amigos
         </Text>
         <ButtonIcon
