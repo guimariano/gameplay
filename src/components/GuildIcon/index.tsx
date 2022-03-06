@@ -3,7 +3,7 @@ import { Image } from "react-native";
 import { styles } from "./styles";
 
 export function GuildIcon() {
-  const uri = 'https://seeklogo.com/images/D/discord-color-logo-E5E6DFEF80-seeklogo.com.png';
+  const uri = 'https://i2.paste.pics/bdfc79375c38e34c235aae385ec5076b.png';
 
   return (
     <Image
