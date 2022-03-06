@@ -27,7 +27,7 @@ export function Home() {
         owner: true,
       },
       category: '1',
-      date: '22/06 às 20:30h',
+      date: '22/06 às 20h30',
       description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10',
     },
     {
@@ -39,7 +39,7 @@ export function Home() {
         owner: true,
       },
       category: '2',
-      date: '22/06 às 20:30h',
+      date: '22/06 às 20h30',
       description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10',
     },
   ]

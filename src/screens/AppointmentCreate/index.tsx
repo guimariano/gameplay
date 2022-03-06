@@ -9,20 +9,20 @@ import {
   Platform,
 } from "react-native";
 
+import { theme } from "../../global/styles/theme";
 import { CategorySelect } from '../../components/CategorySelect';
 import { SmallImput } from "../../components/SmallImput";
 import { Background } from '../../components/Background';
 import { GuildIcon } from '../../components/GuildIcon';
+import { ModalView } from "../../components/ModalView";
 import { TextArea } from "../../components/TextArea";
+import { GuildProps } from "../../components/Guild";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
-
 import { Guilds } from "../Guilds";
 
+
 import { styles } from "./styles";
-import { theme } from "../../global/styles/theme";
-import { ModalView } from "../../components/ModalView";
-import { GuildProps } from "../../components/Guild";
 
 export function AppointmentCreate() {
   const [category, setCategory] = useState('');
@@ -42,13 +42,17 @@ export function AppointmentCreate() {
     setOpenGuildsModal(false);
   }
 
+  function handleCategorySelect(categoryId: string) {
+    setCategory(categoryId);
+  }
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <ScrollView>
-        <Background>
+      <Background>
+        <ScrollView>
           <Header
             title="Agendar partida"
           />
@@ -60,7 +64,7 @@ export function AppointmentCreate() {
           </Text>
           <CategorySelect
             hasCheckbox
-            setCategory={setCategory}
+            setCategory={handleCategorySelect}
             categorySelected={category}
           />
           <View style={styles.form}>
@@ -88,7 +92,9 @@ export function AppointmentCreate() {
 
             <View style={styles.field}>
               <View>
-                <Text style={styles.label}>Dia e Mês</Text>
+                <Text style={[styles.label, { marginBottom: 12 }]}>
+                  Dia e Mês
+                </Text>
 
                 <View style={styles.column}>
                   <SmallImput maxLength={2} />
@@ -98,7 +104,9 @@ export function AppointmentCreate() {
               </View>
 
               <View>
-                <Text style={styles.label}>Hora e Minuto</Text>
+                <Text style={[styles.label, { marginBottom: 12 }]}>
+                  Hora e Minuto
+                </Text>
 
                 <View style={styles.column}>
                   <SmallImput maxLength={2} />
@@ -128,8 +136,8 @@ export function AppointmentCreate() {
             </View>
 
           </View>
-        </Background>
-      </ScrollView>
+        </ScrollView>
+      </Background>
 
       <ModalView
         visible={openGuildsModal}
