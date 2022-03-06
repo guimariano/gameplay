@@ -11,7 +11,7 @@ import { categories } from "../../utils/categories";
 export type GuildProps = {
   id: string,
   name: string,
-  icon: null,
+  icon: string,
   owner: boolean,
 }
 
